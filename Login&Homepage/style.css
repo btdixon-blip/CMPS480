@@ -71,7 +71,7 @@ section{
 }
 
 .hiker::after{
-    content:"";
+    content: normal;
     background:black;
     width: 100%;
     height:100%;
