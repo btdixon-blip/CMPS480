@@ -8,8 +8,8 @@
  $(function() {
    //console.log("jquery loaded!");
 function showUsers() {
-     $("#USERS").empty();
-     $("#USERS").append("Loading data ...");
+     $("#users").empty();
+     $("#users").append("Loading data ...");
      $.ajax({
        type: "GET",
        url: "USERS",
@@ -19,10 +19,10 @@ function showUsers() {
            alert(json.message);
          }
          else {
-           $("#USERS").empty();
+           $("#users").empty();
            var rows = json.data;
            for (var i = 0; i < rows.length; i++) {
-             $("#USERS").append(rows[i].ID + " " + rows[i].NAME + "<br>");
+             $("#users").append(rows[i].ID + " " + rows[i].NAME + "<br>");
            }
          }
        },
@@ -37,7 +37,7 @@ function showUsers() {
      var name = $("#new_name_input").val();
      $.ajax({
        type: "POST",
-       url: "add_USER",
+       url: "add_user",
        data: JSON.stringify({
          name: name
        }),
