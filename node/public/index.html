@@ -37,7 +37,7 @@ function showUsers() {
      var name = $("#new_name_input").val();
      $.ajax({
        type: "POST",
-       url: "add_user",
+       url: "add_USER",
        data: JSON.stringify({
          name: name
        }),
