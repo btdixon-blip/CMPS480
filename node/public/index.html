@@ -12,7 +12,7 @@ function showUsers() {
      $("#users").append("Loading data ...");
      $.ajax({
        type: "GET",
-       url: "users",
+       url: "USERS",
        success: function(json) {
          //console.log(JSON.stringify(json));
          if (!json.success) {
